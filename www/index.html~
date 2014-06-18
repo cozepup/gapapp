@@ -51,7 +51,10 @@ document
       <img src="themes/images/back1.jpg" style="min-width: 100%; width: 100%;">
     </div>
     <div class="slide">
-      <img src="themes/images/back.jpg" style="min-width: 100%; width: 100%;">
+      <img src="themes/images/back2.jpg" style="min-width: 100%; width: 100%;">
+    </div>
+    <div class="slide">
+      <img src="themes/images/back3.jpg" style="min-width: 100%; width: 100%;">
     </div>
   </div>
 </div>
