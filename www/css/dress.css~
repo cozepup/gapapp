@@ -1,5 +1,19 @@
 .custom-ul {margin:0;, padding:0 !important;, margin-left:0;, padding-left:0; -webkit-padding-start: 0px;}
 .custom-li { list-style-type: none;}
+.ui-panel .ui-panel-inner {
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0px;  
+    -webkit-overflow-scrolling: touch;
+}
+@media only screen and (max-width:479px){
+    body {
+     font-size: 13px !important; 
+      }
+	}
 @font-face {
     font-family: "Helvetica Neue"; 
     src: url(HelveticaNeueCyr-Thin.otf); 
@@ -7,9 +21,11 @@
 @font-face {
     font-family: Helvetica; 
     src: url(fonts/HelveticaNeueCyr-Light.otf); 
-   }sans-serif
+   }
 
 @font-face {
     font-family: sans-serif; 
     src: url(fonts/HelveticaNeueCyr-Light.otf); 
    }
+
+
