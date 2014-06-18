@@ -33,8 +33,8 @@ document
 
 
 	<div data-role="page" id="one" data-theme="a" data-position="fixed">
-		<div data-role="header" data-position="fixed" data-fullscreen="true">
-		<a href="#myPanel" class="ui-btn ui-corner-all ui-icon-bullets ui-btn-icon-notext">Меню</a>
+		<div data-role="header" data-position="fixed" data-fullscreen="true" style="font-size: 17px !important;">
+		<a href="#myPanel" class="ui-btn ui-btn-w ui-corner-all ui-icon-bullets ui-btn-icon-notext">Меню</a>
 			<h1>DressCode</h1>
 		</div>
 
@@ -42,7 +42,7 @@ document
 
 
 		
-<div class="slider" id="mySlider">
+<div class="slider" id="mySlider" style="position: fixed;">
   <div class="slide-group" style="-webkit-transition: 0ms; transition: 0ms;">
     <div class="slide">
       <img src="themes/images/back.jpg" style="min-width: 100%; width: 100%;">
@@ -91,42 +91,42 @@ document
 		</ul>
 </div></div>
 
-    <div class="ui-block-a"><a href="#shop" data-transition="flow"><div class="ui-bar ui-bar-a" style="height:60px;  text-align:center">
+    <div class="ui-block-a"><a href="#shop" data-transition="slide"><div class="ui-bar ui-bar-a" style="height:60px;  text-align:center">
 		<ul class=custom-ul>
 		<li class=custom-li><img  src="icons/shop.png" style="width:25px; height:auto;"></li>
 		<li class=custom-li>О магазине</li>
 		</ul>
 </div></a></div>
 
-    <div class="ui-block-b"><a href="#opt" data-transition="flow"><div class="ui-bar ui-bar-a" style="height:60px; text-align:center">
+    <div class="ui-block-b"><a href="#opt" data-transition="slide"><div class="ui-bar ui-bar-a" style="height:60px; text-align:center">
 		<ul class=custom-ul>
 		<li class=custom-li><img  src="icons/opt.png" style="width:25px; height:auto;"></li>
 		<li class=custom-li>Опт</li>
 		</ul>
 </div></a></div>
 
-    <div class="ui-block-c"><a href="#rozn" data-transition="flow"><div class="ui-bar ui-bar-a" style="height:60px; text-align:center">
+    <div class="ui-block-c"><a href="#rozn" data-transition="slide"><div class="ui-bar ui-bar-a" style="height:60px; text-align:center">
 		<ul class=custom-ul>
 		<li class=custom-li><img  src="icons/rozn.png" style="width:25px; height:auto;"></li>
 		<li class=custom-li>Розница</li>
 		</ul>
 </div></a></div>
 
-    <div class="ui-block-a"><a href="#dost" data-transition="flow"><div class="ui-bar ui-bar-a" style="height:60px; text-align:center">
+    <div class="ui-block-a"><a href="#dost" data-transition="slide"><div class="ui-bar ui-bar-a" style="height:60px; text-align:center">
 		<ul class=custom-ul>
 		<li class=custom-li><img  src="icons/truck.png" style="width:25px; height:auto;"></li>		
 		<li class=custom-li>Доставка</li>
 		</ul>
 </div></a></div>
 
-    <div class="ui-block-b"><a href="#vk" data-transition="flow"><div class="ui-bar ui-bar-a" style="height:60px; text-align:center">
+    <div class="ui-block-b"><a href="#vk" data-transition="slide"><div class="ui-bar ui-bar-a" style="height:60px; text-align:center">
 		<ul class=custom-ul>
 		<li class=custom-li><img  src="icons/vk.png" style="width:25px; height:auto;"></li>
-		<li class=custom-li>Мы Вконтакте</li>
+		<li class=custom-li>Мы ВКонтакте</li>
 		</ul>
 </div></a></div>
 
-    <div class="ui-block-c"><a href="#popup" data-rel="dialog" data-transition="flow"><div class="ui-bar ui-bar-a" style="height:60px; text-align:center">
+    <div class="ui-block-c"><a href="#popup" data-rel="dialog" data-transition="slide"><div class="ui-bar ui-bar-a" style="height:60px; text-align:center">
 		<ul class=custom-ul>
 		<li class=custom-li><img  src="icons/phone.png" style="width:25px; height:auto;"></li>
 		<li class=custom-li>Контакты</li>
@@ -206,7 +206,7 @@ document
 		<p>Пн-Сб 10.00-19.00</p>
 		<p>Вс 11.00-18.00</p>
 		<p>г. Харьков, ул. Пушкинская 43, ТЦ Сана</p>
-		<p><a href="#one" data-transition="flow" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Назад</a></p>
+		<p><a href="#one" data-transition="slide" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Назад</a></p>
 	</div><!-- /content -->
 
 	
@@ -217,7 +217,7 @@ document
 <div data-role="page" id="vk" data-theme="a" data-url="vk" tabindex="0" class="ui-page ui-page-theme-a" style="min-height: 733px;">
 
 	<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
-	<a role="button" href="#one" data-transition="flow" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left">Close</a>
+	<a role="button" href="#one" data-transition="slide" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left">Close</a>
 		<h1 class="ui-title" role="heading" aria-level="1">Мы ВКонтакте</h1>
 	</div><!-- /header -->
 
@@ -278,7 +278,7 @@ document
     <p>http://vk.com/id199732998</p></a>
     </li>
 </ul>
-		<p><a href="#one" data-transition="flow" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-back ui-btn-icon-left">Назад</a></p>
+		<p><a href="#one" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-back ui-btn-icon-left">Назад</a></p>
 	</div><!-- /content -->
 
 	
@@ -290,7 +290,7 @@ document
 <div data-role="page" id="shop" data-theme="a" data-url="shop" tabindex="0" class="ui-page ui-page-theme-a" style="min-height: 733px;">
 
 	<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
-	<a role="button" href="#one" data-transition="flow" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left">Close</a>
+	<a role="button" href="#one" data-transition="slide" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left">Close</a>
 		<h1 class="ui-title" role="heading" aria-level="1">О магазине</h1>
 	</div><!-- /header -->
 
@@ -330,7 +330,7 @@ document
       
   	
 		
-		<p><a href="#one" data-transition="flow" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-back ui-btn-icon-left">Назад</a></p>
+		<p><a href="#one" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-back ui-btn-icon-left">Назад</a></p>
 	</div><!-- /content -->
 
 	
@@ -341,7 +341,7 @@ document
 <div data-role="page" id="opt" data-theme="a" data-url="opt" tabindex="0" class="ui-page ui-page-theme-a" style="min-height: 733px;">
 
 	<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
-	<a role="button" href="#one" data-transition="flow" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left">Close</a>
+	<a role="button" href="#one" data-transition="slide" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left">Close</a>
 		<h1 class="ui-title" role="heading" aria-level="1">Опт</h1>
 	</div><!-- /header -->
 
@@ -360,7 +360,7 @@ document
 <p>E-mail: elenapokalitsinadc@gmail.com</p>
 
 		
-		<p><a href="#one" data-transition="flow" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-back ui-btn-icon-left">Назад</a></p>
+		<p><a href="#one" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-back ui-btn-icon-left">Назад</a></p>
 	</div><!-- /content -->
 
 	
@@ -371,7 +371,7 @@ document
 <div data-role="page" id="rozn" data-theme="a" data-url="rozn" tabindex="0" class="ui-page ui-page-theme-a" style="min-height: 733px;">
 
 	<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
-	<a role="button" href="#one" data-transition="flow" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left">Close</a>
+	<a role="button" href="#one" data-transition="slide" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left">Close</a>
 		<h1 class="ui-title" role="heading" aria-level="1">Розница</h1>
 	</div><!-- /header -->
 
@@ -390,7 +390,7 @@ document
 <p>Skype: elenapokalicina</p>
 <p>E-mail: elenapokalitsinadc@gmail.com</p>
 
-		<p><a href="#one" data-transition="flow" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-back ui-btn-icon-left">Назад</a></p>
+		<p><a href="#one" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-back ui-btn-icon-left">Назад</a></p>
 	</div><!-- /content -->
 
 	
@@ -401,7 +401,7 @@ document
 <div data-role="page" id="dost" data-theme="a" data-url="dost" tabindex="0" class="ui-page ui-page-theme-a" style="min-height: 733px;">
 
 	<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
-	<a role="button" href="#one" data-transition="flow" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left">Close</a>
+	<a role="button" href="#one" data-transition="slide" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left">Close</a>
 		<h1 class="ui-title" role="heading" aria-level="1">Доставка</h1>
 	</div><!-- /header -->
 
@@ -425,7 +425,7 @@ document
 <p>E-mail: elenapokalitsinadc@gmail.com</p>
 
 		
-		<p><a href="#one" data-transition="flow" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-back ui-btn-icon-left">Назад</a></p>
+		<p><a href="#one" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-back ui-btn-icon-left">Назад</a></p>
 	</div><!-- /content -->
 
 	
