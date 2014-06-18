@@ -212,7 +212,7 @@ document.addEventListener('deviceready', function() {
 
 
 
-	<div data-role="header" data-theme="a" role="banner" class="ui-header ui-bar-a">
+	<div data-role="header" data-theme="a" role="banner" class="ui-header ui-bar-a" style="font-size: 17px !important;">
 		<h1 class="ui-title" role="heading" aria-level="1">Контакты</h1>
 	</div><!-- /header -->
 
@@ -235,7 +235,7 @@ document.addEventListener('deviceready', function() {
 <!-- vk -->
 <div data-role="page" id="vk" data-theme="a" data-url="vk" tabindex="0" class="ui-page ui-page-theme-a" style="min-height: 733px;">
 
-	<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+	<div data-role="header" role="banner" class="ui-header ui-bar-inherit" style="font-size: 17px !important;">
 	<a role="button" href="#one" data-transition="slide" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left">Close</a>
 		<h1 class="ui-title" role="heading" aria-level="1">Мы ВКонтакте</h1>
 	</div><!-- /header -->
@@ -308,7 +308,7 @@ document.addEventListener('deviceready', function() {
 <!-- shop -->
 <div data-role="page" id="shop" data-theme="a" data-url="shop" tabindex="0" class="ui-page ui-page-theme-a" style="min-height: 733px;">
 
-	<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+	<div data-role="header" role="banner" class="ui-header ui-bar-inherit" style="font-size: 17px !important;">
 	<a role="button" href="#one" data-transition="slide" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left">Close</a>
 		<h1 class="ui-title" role="heading" aria-level="1">О магазине</h1>
 	</div><!-- /header -->
@@ -359,7 +359,7 @@ document.addEventListener('deviceready', function() {
 <!-- opt -->
 <div data-role="page" id="opt" data-theme="a" data-url="opt" tabindex="0" class="ui-page ui-page-theme-a" style="min-height: 733px;">
 
-	<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+	<div data-role="header" role="banner" class="ui-header ui-bar-inherit" style="font-size: 17px !important;">
 	<a role="button" href="#one" data-transition="slide" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left">Close</a>
 		<h1 class="ui-title" role="heading" aria-level="1">Опт</h1>
 	</div><!-- /header -->
@@ -389,7 +389,7 @@ document.addEventListener('deviceready', function() {
 <!-- rozn -->
 <div data-role="page" id="rozn" data-theme="a" data-url="rozn" tabindex="0" class="ui-page ui-page-theme-a" style="min-height: 733px;">
 
-	<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+	<div data-role="header" role="banner" class="ui-header ui-bar-inherit" style="font-size: 17px !important;">
 	<a role="button" href="#one" data-transition="slide" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left">Close</a>
 		<h1 class="ui-title" role="heading" aria-level="1">Розница</h1>
 	</div><!-- /header -->
@@ -419,7 +419,7 @@ document.addEventListener('deviceready', function() {
 <!-- dost -->
 <div data-role="page" id="dost" data-theme="a" data-url="dost" tabindex="0" class="ui-page ui-page-theme-a" style="min-height: 733px;">
 
-	<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+	<div data-role="header" role="banner" class="ui-header ui-bar-inherit" style="font-size: 17px !important;">
 	<a role="button" href="#one" data-transition="slide" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left">Close</a>
 		<h1 class="ui-title" role="heading" aria-level="1">Доставка</h1>
 	</div><!-- /header -->
