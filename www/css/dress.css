@@ -1,0 +1,15 @@
+.custom-ul {margin:0;, padding:0 !important;, margin-left:0;, padding-left:0; -webkit-padding-start: 0px;}
+.custom-li { list-style-type: none;}
+@font-face {
+    font-family: "Helvetica Neue"; 
+    src: url(HelveticaNeueCyr-Thin.otf); 
+   }
+@font-face {
+    font-family: Helvetica; 
+    src: url(fonts/HelveticaNeueCyr-Light.otf); 
+   }
+
+@font-face {
+    font-family: sans-serif; 
+    src: url(fonts/HelveticaNeueCyr-Light.otf); 
+   }
