@@ -1,45 +1,440 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>InAppBrowser.insertCSS Example</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<meta charset="utf-8">
+	<title>DressCode</title>
+	<link rel="stylesheet" href="themes/dresscode.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.2.min.css" />
+	<script src="themes/jquery-1.10.2.min.js"></script>
+	<script src="themes/jquery.mobile-1.4.2.min.js"></script>
 
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8">
+ 	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link href="css/ratchet.css" rel="stylesheet">
+	<link href="css/ratchet.min.css" rel="stylesheet">
+	<link href="css/ratchet-theme-ios.css" rel="stylesheet">
+	<link href="css/ratchet-theme-ios.min.css" rel="stylesheet">
+        <script type="text/javascript" charset="utf-8" src="js/ratchet.js"></script>	
+	<script type="text/javascript" charset="utf-8" src="js/ratchet.min.js"></script> 
 
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
+	<link rel="stylesheet" href="css/dress.css" />	
+	
+<script type="text/javascript">
+document
+.querySelector('#mySlider')
+.addEventListener('slide', myFunction)</script>
 
-    // Global InAppBrowser reference
-    var iabRef = null;
+</head>
+<body>
 
-    // Inject our custom CSS into the InAppBrowser window
-    //
-    function changeBackgroundColor() {
-        iabRef.insertCSS({
-            code: "body { background: #ffff00"
-        }, function() {
-            alert("Styles Altered");
-        }
-    }
 
-    function iabClose(event) {
-         iabRef.removeEventListener('loadstop', changeBackgroundColor);
-         iabRef.removeEventListener('exit', iabClose);
-    }
 
-    // device APIs are available
-    //
-    function onDeviceReady() {
-         iabRef = window.open('http://apache.org', '_blank', 'location=yes');
-         iabRef.addEventListener('loadstop', changeBackgroundColor);
-         iabRef.addEventListener('exit', iabClose);
-    }
+	<div data-role="page" id="one" data-theme="a" data-position="fixed">
+		<div data-role="header" data-position="fixed" data-fullscreen="true">
+		<a href="#myPanel" class="ui-btn ui-btn-w ui-corner-all ui-icon-bullets ui-btn-icon-notext">Меню</a>
+			<h1>DressCode</h1>
+		</div>
 
-    </script>
-  </head>
-  <body>
-<a href="#" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile', '_blank','location=yes');
-">elenapokalitsina</a>
-  </body>
+
+
+
+		
+<div class="slider" id="mySlider">
+  <div class="slide-group" style="-webkit-transition: 0ms; transition: 0ms;">
+    <div class="slide">
+      <img src="themes/images/back.jpg" style="min-width: 100%; width: 100%;">
+    </div>
+    <div class="slide">
+      <img src="themes/images/back1.jpg" style="min-width: 100%; width: 100%;">
+    </div>
+    <div class="slide">
+      <img src="themes/images/back.jpg" style="min-width: 100%; width: 100%;">
+    </div>
+  </div>
+</div>
+
+
+
+<!--
+<div id="wr" style="min-width: 100%; position: fixed; width:100%; height:100%; text-align:center">
+<img  src="themes/images/back.jpg" style="min-width: 100%; width: 100%;">
+</div> 
+-->
+
+<div data-role="footer" style="overflow:hidden;" data-position="fixed" data-fullscreen="true">
+	<div class="ui-grid-b">
+
+	<div class="ui-block-a" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile', '_blank','location=yes');">
+	<div class="ui-bar ui-bar-a" style="height:60px; text-align:center">
+		<ul class=custom-ul>
+		<li class=custom-li><img  src="icons/catalog.png" style="width:25px; height:auto;"></li>
+		<li class=custom-li>Каталог</li>
+		</ul>
+	</div></div>
+
+	<div class="ui-block-b" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=72', '_blank','location=yes');">
+	<div class="ui-bar ui-bar-a" style="height:60px; text-align:center">
+		<ul class=custom-ul>
+		<li class=custom-li><img  src="icons/sale.png" style="width:25px; height:auto;"></li>
+		<li class=custom-li>Акция</li>
+		</ul>
+</div></div>
+    
+	<div class="ui-block-c" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=checkout/cart', '_blank','location=yes');"">
+<div class="ui-bar ui-bar-a" style="height:60px; text-align:center">
+		<ul class=custom-ul>
+		<li class=custom-li><img  src="icons/cart.png" style="width:25px; height:auto;"></li>
+		<li class=custom-li>Корзина</li>
+		</ul>
+</div></div>
+
+    <div class="ui-block-a"><a href="#shop" data-transition="flow"><div class="ui-bar ui-bar-a" style="height:60px;  text-align:center">
+		<ul class=custom-ul>
+		<li class=custom-li><img  src="icons/shop.png" style="width:25px; height:auto;"></li>
+		<li class=custom-li>О магазине</li>
+		</ul>
+</div></a></div>
+
+    <div class="ui-block-b"><a href="#opt" data-transition="flow"><div class="ui-bar ui-bar-a" style="height:60px; text-align:center">
+		<ul class=custom-ul>
+		<li class=custom-li><img  src="icons/opt.png" style="width:25px; height:auto;"></li>
+		<li class=custom-li>Опт</li>
+		</ul>
+</div></a></div>
+
+    <div class="ui-block-c"><a href="#rozn" data-transition="flow"><div class="ui-bar ui-bar-a" style="height:60px; text-align:center">
+		<ul class=custom-ul>
+		<li class=custom-li><img  src="icons/rozn.png" style="width:25px; height:auto;"></li>
+		<li class=custom-li>Розница</li>
+		</ul>
+</div></a></div>
+
+    <div class="ui-block-a"><a href="#dost" data-transition="flow"><div class="ui-bar ui-bar-a" style="height:60px; text-align:center">
+		<ul class=custom-ul>
+		<li class=custom-li><img  src="icons/truck.png" style="width:25px; height:auto;"></li>		
+		<li class=custom-li>Доставка</li>
+		</ul>
+</div></a></div>
+
+    <div class="ui-block-b"><a href="#vk" data-transition="flow"><div class="ui-bar ui-bar-a" style="height:60px; text-align:center">
+		<ul class=custom-ul>
+		<li class=custom-li><img  src="icons/vk.png" style="width:25px; height:auto;"></li>
+		<li class=custom-li>Мы Вконтакте</li>
+		</ul>
+</div></a></div>
+
+    <div class="ui-block-c"><a href="#popup" data-rel="dialog" data-transition="flow"><div class="ui-bar ui-bar-a" style="height:60px; text-align:center">
+		<ul class=custom-ul>
+		<li class=custom-li><img  src="icons/phone.png" style="width:25px; height:auto;"></li>
+		<li class=custom-li>Контакты</li>
+		</ul>
+</div></a></div>
+</div>
+
+		</div>
+<!-- panel -->
+<div data-role="panel" id="myPanel" data-swipe-close="false" data-theme="b" class="ui-panel ui-panel-position-left ui-panel-display-push ui-body-a ui-panel-animate ui-panel-closed"> 
+<div class="ui-panel-inner" style="">
+<ul data-role="listview" data-theme="b" class="nav-search ui-listview">
+   <ul data-role="listview" data-inset="true" data-theme="b" class="ui-listview ui-listview-inset ui-corner-all ui-shadow ui-group-theme-b">
+
+<li data-role="list-divider" data-theme="b" data-swatch="b" data-form="ui-bar-b" role="heading" class="ui-li-divider ui-bar-b ui-first-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile', '_blank','location=yes');">Каталог</li>
+<li data-form="ui-body-b" data-swatch="b" data-theme="b" class="ui-li-static ui-body-b">Женская одежда</li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=98', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Гольфы</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=89', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Костюмы</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=103', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Кроссовки</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=88', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Очки</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=100', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Рукавицы</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=90', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Часы</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=97', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Шарфы - Шапки</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=87', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Шорты</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=59', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Кофты</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=60', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Майки-футболки</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=61', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Платья</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=62', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Джинсы-брюки</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=63', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Юбки</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=64', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Куртки</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=66', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#4">Комбинезоны</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=67', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Рубашки</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=68', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Пиджаки</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=69', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Ремни</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=70', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Сумки</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=71', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#9">Украшения</a></li>
+<li data-form="ui-body-b" data-swatch="b" data-theme="b" class="ui-li-static ui-body-b" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=77', '_blank','location=yes'); ">Мужская одежда</li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=77_94', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Обувь</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=77_86', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Очки</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=77_101', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Пиджаки</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=77_96', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Ремни</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=77_91', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Часы</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=77_99', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Шапки-Шарфы</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=77_85', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Шорты</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=77_78', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Рубашки</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=77_79', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Футболки-майки</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=77_80', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Куртки</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=77_81', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Джинсы-брюки</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=77_82', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Кофты</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=77_83', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Аксессуары</a></li>
+<li class="ui-last-child" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=77_84', '_blank','location=yes'); "><a class="ui-btn-b ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-b" data-swatch="b" data-theme="b" href="#">Спортивные костюмы</a></li>
+
+</ul></ul>
+
+
+</div>
+  </div> 
+<!--end panel -->
+
+	</div>
+
+<!-- page popup -->
+<div data-role="dialog" id="popup" data-url="popup" tabindex="0" class="ui-page ui-page-theme-a ui-dialog" style="min-height: 939px;">
+
+
+
+	<div data-role="header" data-theme="a" role="banner" class="ui-header ui-bar-a">
+		<h1 class="ui-title" role="heading" aria-level="1">Контакты</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+				<h2>+380633966223</h2>
+		<h2>+380577518343</h2>
+		<h2>Skype: elenapokalicina</h2>
+		<p>Прием заказов: 24 часа</p>
+		<p>Доставка и обработка заказов:</p>
+		<p>Пн-Сб 10.00-19.00</p>
+		<p>Вс 11.00-18.00</p>
+		<p>г. Харьков, ул. Пушкинская 43, ТЦ Сана</p>
+		<p><a href="#one" data-transition="flow" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Назад</a></p>
+	</div><!-- /content -->
+
+	
+</div>
+<!-- /page popup -->
+
+<!-- vk -->
+<div data-role="page" id="vk" data-theme="a" data-url="vk" tabindex="0" class="ui-page ui-page-theme-a" style="min-height: 733px;">
+
+	<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+	<a role="button" href="#one" data-transition="flow" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left">Close</a>
+		<h1 class="ui-title" role="heading" aria-level="1">Мы ВКонтакте</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+	<ul data-role="listview" data-inset="true">
+
+    <li onclick="var ref = window.open('http://vk.com/id190728521', '_blank','location=yes');"><a href="#">
+        
+    <h2>Менеджер Денис</h2>
+    <p>http://vk.com/id190728521</p></a>
+    </li>
+
+    <li onclick="var ref = window.open('http://vk.com/id165099462', '_blank','location=yes');"><a href="#">
+        
+    <h2>Менеджер Игорь</h2>
+    <p>http://vk.com/id165099462</p></a>
+    </li>
+
+    <li onclick="var ref = window.open('http://vk.com/id13190298', '_blank','location=yes');"><a href="#">
+        
+    <h2>Менеджер Оля, Алена</h2>
+    <p>http://vk.com/id13190298</p></a>
+    </li>
+
+<li onclick="var ref = window.open('http://vk.com/id166523048', '_blank','location=yes');"><a href="#">
+        
+    <h2>Менеджер Марина</h2>
+    <p>http://vk.com/id166523048</p></a>
+    </li>
+
+<li onclick="var ref = window.open('http://vk.com/id166250006', '_blank','location=yes');"><a href="#">
+        
+    <h2>Менеджер Оля</h2>
+    <p>http://vk.com/id166250006</p></a>
+    </li>
+
+<li onclick="var ref = window.open('http://vk.com/dresscode.formen', '_blank','location=yes');"><a href="#">
+        
+    <h2>Менеджер Максим</h2>
+    <p>Мужская коллекция</p><p>http://vk.com/dresscode.formen</p></a>
+    </li>
+
+<li onclick="var ref = window.open('http://vk.com/dresscodejunior', '_blank','location=yes');"><a href="#">
+        
+    <h2>Детская коллекция</h2>
+    <p>http://vk.com/dresscodejunior</p></a>
+    </li>
+
+<li onclick="var ref = window.open('http://vk.com/dresscode_akcia', '_blank','location=yes');"><a href="#">
+        
+    <h2>Акция</h2>
+    <p>Менеджер Денис</p><p>http://vk.com/dresscode_akcia</p></a>
+    </li>
+
+<li onclick="var ref = window.open('http://vk.com/id199732998', '_blank','location=yes');"><a href="#">
+        
+    <h2>Страница магазин ТЦ 'САНА'</h2>
+    <p>http://vk.com/id199732998</p></a>
+    </li>
+</ul>
+		<p><a href="#one" data-transition="flow" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-back ui-btn-icon-left">Назад</a></p>
+	</div><!-- /content -->
+
+	
+</div>
+<!-- vk -->
+
+
+<!-- shop -->
+<div data-role="page" id="shop" data-theme="a" data-url="shop" tabindex="0" class="ui-page ui-page-theme-a" style="min-height: 733px;">
+
+	<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+	<a role="button" href="#one" data-transition="flow" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left">Close</a>
+		<h1 class="ui-title" role="heading" aria-level="1">О магазине</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+
+  
+<h2>Добро пожаловать в наш магазин эксклюзивной одежды Dress Code!</h2>
+<div id="shopimage" style="min-width: 50%; position: relative; width:auto; height:auto; text-align:center">
+<p><img  src="themes/images/DressCode.jpg" style="min-width: 50%; width: 50%;"></div>
+</p>
+<p>Наш магазин всегда рад помочь Вам подчеркнуть всю уникальность, яркость и актуальность Вашего стиля!</p>
+<p>Благодаря магазину Dress Code, Вы лично удостоверитесь в том, что больше нет никакой необходимости выбирать между комфортом и стилем, уютом и шиком.</p>
+<p>Справедливо будет заметить, что актуальность нашей одежды не противоречит качеству, ведь мы хотим, чтобы уважаемые покупатели магазина Dress Code, приобретали не только ультрамодные новинки, в которых отразились последние модные веяния, а также качественные и натуральные ткани, профессиональный пошив, благодаря чему Вы можете быть уверенны в том, что вещь прослужит Вам долго.</p>
+<p>Своей первостепенной задачей мы считаем помочь Вам подчеркнуть всю изысканность, уникальность, привлекательность и современность Вашего стиля!</p>
+<p>Благодаря регулярным обновлениям магазина Dress Code, даже самые искушенные модники и модницы</p>
+<p>смогут подобрать именно то, что подойдет их стилю, подчеркивая также все достоинства фигуры.</p>
+<p>В магазине Dress Code Вы всегда сможете найти вещи для любого предназначения и образа жизни: повседневная, вечерняя спортивная, кэжуал одежда никого не оставит равнодушным!</p>
+<p>Мы очень рады сообщить Вам, что у нас представлен широчайший выбор вечерних платьев, в которых Вы будете истинной королевой вечера, благодаря ультрамодным тенденциям, которые Вы также можете увидеть в последних коллекциях и показах таких мировых брендов как: Chanel, Dior, DsG, Givenchy, Hermes, LY, Vivienne Westwood, Gucci.</p>
+<p>Для повседневного и комфортного стиля, но при этом не менее яркого, прекрасно подойдет широчайший выбор юбок, кофточек, свитеров, туник и джинсов, разнообразнейшие модели которых представлены в магазине Dress Code по самым выгодным и доступным ценам! Вы сможете комбинировать вещи по своему усмотрению, создавая уникальные сочетания и диктуя тенденции!</p>
+<p>Не для кого не секрет, что встречают по одежке, а это при правильном подходе, только сыграет Вам на руку! Так создайте, произведите именно то, первое</p>
+<p>незабываемое и интригующее впечатление истинного модника или модницы, а магазин Dress Code с радостью поможет Вам в этом!</p>
+<p>Также в магазине предоставлен широкий выбор эксклюзивной и качественной одежды тм Elena Pokalitsina: от разнообразнейших платьев до всевозможных футболок.</p>
+<p>Мы всегда готовы и рады помочь Вам, а также ответим на все вопросы, которые Вас интересуют! Надеемся, что Вы по достоинству оцените широчайший выбор наших моделей!</p>
+<p>Наши менеджеры смогут оперативно и быстро подобрать размер под Ваши параметры.</p>
+<p>У нас вы сможете приобрести одежду как в РОЗНИЦУ так же и ОПТОМ.</p>
+<p>ОПТ по Украине от 5 единиц любого товара, на ОПТ скидка 20 процентов от розничной цены.</p>
+<p>В страны СНГ и страны зарубежья только ОПТ от 10 единиц любого товара, скидка 20 процентов от розничной цены. Сроки доставки по Украине 1-2 дня, Россия и страны зарубежья 3-10 дней.</p>
+<p>Радуйте себя обновками!</p>
+<p>Желаем приятных покупок!!!</p>
+<p>&nbsp;</p>
+<p>Наши контакты:</span></p>
+<p>г.Харьков, ул.Пушкинская 43, ТЦ САНА</span></p>
+<p>Тел: +380577518343, +380633966223</p>
+<p>Skype: elenapokalicina</p>
+<p>E-mail:&nbsp;elenapokalitsinadc@gmail.com</p>
+   
+      
+  	
+		
+		<p><a href="#one" data-transition="flow" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-back ui-btn-icon-left">Назад</a></p>
+	</div><!-- /content -->
+
+	
+</div>
+<!-- shop -->
+
+<!-- opt -->
+<div data-role="page" id="opt" data-theme="a" data-url="opt" tabindex="0" class="ui-page ui-page-theme-a" style="min-height: 733px;">
+
+	<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+	<a role="button" href="#one" data-transition="flow" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left">Close</a>
+		<h1 class="ui-title" role="heading" aria-level="1">Опт</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+	
+<p>Уважаемые Оптовые покупатели сразу хотим предупредить Вас о том что на сайте указанны оптовые цены ! Розничная цена указанна в описании товара! Скидка на ОПТ составляет 20% от розничной цены.</p>
+<p>После того как Вы сделаете заказ, наш менеджер соберет Ваш заказ и оповестит Вас о наличии вещей в заказе на Ваш Email адрес или на Ваш контактный телефон который вы указали при регистрации или при оформлении заказа.</p>
+<p>ОПТ по Украине от 5 ед разного товара, скидка 20 процентов от розничной цены. У нас так же есть БРОНЬ, у вас есть возможность бронировать товар на 2-3 дня.Доставка осуществляются новой почтой ОДИН РАЗ В ДЕНЬ. Оплатить заказ НЕОБХОДИМО в день заказа до 14:00, чтобы ваш заказ был отправлен в этот же день. Неоплаченные заказы не отправляются. Мы работаем как по 100-процентной предоплате на карту, так и наложеным платежом ТОЛЬКО ПО УКРАИНЕ. Доставка1-2 дня.</p>
+<p>В Россию и другие страны только ОПТ от 10 единиц разного товара, скидка 20 процентов от розничной цены.У нас так же есть БРОНЬ, у вас есть возможность бронировать товар на 2-3 дня . В Россию отправляем укрпочтой или курьерской службой, которая сотрудничает с транспортными компаниями России. Стоимость 45 грн за кг + доставка по России оплачивается при получении на транспортной компании(если транспортная компания имеет представительство в вашем городе, то доставка по России 300-400 рублей за посылку, точнее можете посмотреть на сайтах транспортных компаний "ПЭК", "Байкалсервис", ЖелДор и т.п. Доставка 3-7 дней.</p>
+<p>Доставка в другие страны расчитывается индивидуально в зависимости от географического местоположения Вашей страны и слжубы доставки. Оплата осуществляется преимущественно системой оплаты Золотая Корона(возможны и другие способы оплаты - Мигом, контакт, юнистрим).Заказ может быть совместный с мужской коллекцией тоесть в заказ вы можете добавлятьть как женские, так и мужские позиции.</p>
+<p>Мы работаем с 10.00 до 19.00. Спасибо вам огромное за внимание и за то что вы у нас есть! Мы постараемся всем уделить максимум внимания! Спасибо от всей команды магазина Дресс Код!</p>
+<p>Наши контакты:</p>
+<p>г.Харьков, ул.Пушкинская 43, ТЦ САНА</p>
+<p>Тел: +380577518343, +380633966223</p>
+<p>Skype: elenapokalicina</p>
+<p>E-mail: elenapokalitsinadc@gmail.com</p>
+
+		
+		<p><a href="#one" data-transition="flow" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-back ui-btn-icon-left">Назад</a></p>
+	</div><!-- /content -->
+
+	
+</div>
+<!-- opt -->
+
+<!-- rozn -->
+<div data-role="page" id="rozn" data-theme="a" data-url="rozn" tabindex="0" class="ui-page ui-page-theme-a" style="min-height: 733px;">
+
+	<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+	<a role="button" href="#one" data-transition="flow" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left">Close</a>
+		<h1 class="ui-title" role="heading" aria-level="1">Розница</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+
+<p>Уважаемые Розничные покупатели, сразу хотим предупредить Вас о том что на сайте указанны оптовые цены!</p>
+<p>Розничная цена указанна в описании товара!</p>
+<p>После того как Вы сделаете заказ, наш менеджер соберет и посчитает Ваш заказ по розничной цене, после чего оповестит Вас на Ваш Email адрес или на ваш контактный номер который Вы указали при регистрации.</p>
+<p>Розничные заказы по Украине от 1 единицы.</p>
+<p>У нас так же есть БРОНЬ, у вас есть возможность бронировать товар на 2-3 дня.</p>
+<p>Доставка осуществляются новой почтой ОДИН РАЗ В ДЕНЬ. Оплатить заказ НЕОБХОДИМО в день заказа до 14:00, чтобы ваш заказ был отправлен в этот же день. Неоплаченные заказы не отправляются. Мы работаем как по 100-процентной предоплате на карту, так и наложеным платежом ТОЛЬКО ПО УКРАИНЕ. Доставка1-2 дня.</p>
+<p>Розничные заказы в Россию и другие страны Вы можете оформить у наших партнеров, которые работают в розницу от 1 единицы товара вот на этой странице в 'ВКОНТАКТЕ". http://vk.com/id170237993</p>
+<p>Наши контакты:</p>
+<p>г.Харьков, ул.Пушкинская 43, ТЦ САНА</p>
+<p>Тел: +380577518343, +380633966223</p>
+<p>Skype: elenapokalicina</p>
+<p>E-mail: elenapokalitsinadc@gmail.com</p>
+
+		<p><a href="#one" data-transition="flow" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-back ui-btn-icon-left">Назад</a></p>
+	</div><!-- /content -->
+
+	
+</div>
+<!-- rozn -->
+
+<!-- dost -->
+<div data-role="page" id="dost" data-theme="a" data-url="dost" tabindex="0" class="ui-page ui-page-theme-a" style="min-height: 733px;">
+
+	<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+	<a role="button" href="#one" data-transition="flow" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-left">Close</a>
+		<h1 class="ui-title" role="heading" aria-level="1">Доставка</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+<p>ОПТ по Украине от 5 единиц разного товара, скидка 20 процентов от розничной цены. Доставка осуществляются новой почтой ОДИН РАЗ В ДЕНЬ. Оплатить заказ НЕОБХОДИМО в день заказа до 14:00, чтобы ваш заказ был отправлен в этот же день. Неоплаченные заказы не отправляются. Мы работаем как по 100-процентной предоплате на карту, так и наложеным платежом ТОЛЬКО ПО УКРАИНЕ. Доставка 1-2 дня</p>
+<p>В Россию и другие страны только опт 10 единиц разного товара, скидка 20 процентов от розничной цены. В Россию отправляем укрпочтой или курьерской службой, которая сотрудничает с транспортными компаниями России. Стоимость 45 грн за кг + доставка по России оплачивается при получении на транспортной компании(если транспортная компания имеет представительство в вашем городе, то доставка по России 300-400 рублей за посылку, точнее можете посмотреть на сайтах транспортных компаний "ПЭК", "Байкалсервис", ЖелДор и т.п. Доставка 3-7 дней.</p>
+<p>Доставка в другие страны расчитывается индивидуально в зависимости от географического расположения страны и слжубы доставки. Оплата осуществляется преимущественно системой оплаты Золотая Корона(возможны и другие способы оплаты - Мигом, контакт, юнистрим).</p>
+<p>Расчитать стомость доставки Укр. Почтой: <a href="http://services.ukrposhta.com/calcutil/PostalMails.aspx"target="_blank">http://services.ukrposhta.com/calcutil/PostalMails.aspx</a></p>
+<p>Расчитать стомость доставки EMS:&nbsp;<a href="http://dpsz.ua/ru/"target="_blank"> http://dpsz.ua/ru/</a></p>
+<p>Отследить посылку Новой Почты <a href="http://novaposhta.ua/"target="_blank">http://novaposhta.ua/</a></p>
+<p>Приобрести одежду по самым выгодным ценам оптом и в розницу Вы сможете в магазине Dress Code непосредственно в городе Харьков по адресу ул. Пушкинская 43 ТЦ "САНА",ст. м. Архитектора Бекетова!Ждем всех с 10.00 до 19.00 Тел.+380577518343</p>
+<p>А также ежедневно в магазине Dress Code по адресу г.Харьков, ул. Героев Труда,7 ТРК Караван, с 10.00 до 22.00,левое крыло.</p>
+<p>Также Вы имеете возможность совершать розничные и оптовые покупки в магазине Dress Code через интернет-сайт http://elenapokalitsina.com.ua, а также через странички ВК http://vk.com/id166523048 , http://vk.com/id13190298.</p>
+<p>Доставка осуществляется службами Новая Почта, ПЭК, Деловая Линия, Майкл Сервис, Байкал Сервис, Жел Дор, ЕМС, и др.</p>
+<p>Весь товар, выставленный на сайте есть в наличии, размеры уточняйте у менеджера. Мы работаем с 10.00 до 19.00.</p>
+<p>Спасибо вам огромное за внимание и за то что вы у нас есть! Мы постараемся всем уделить максимум внимания! Спасибо от всей команды магазина Дресс Код elenapokalitsinadc@gmail.com</p>
+<p>Наши контакты:</p>
+<p>г.Харьков, ул.Пушкинская 43, ТЦ САНА</p>
+<p>Тел: +380577518343, +380633966223</p>
+<p>Skype: elenapokalicina</p>
+<p>E-mail: elenapokalitsinadc@gmail.com</p>
+
+		
+		<p><a href="#one" data-transition="flow" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-back ui-btn-icon-left">Назад</a></p>
+	</div><!-- /content -->
+
+	
+</div>
+<!-- dost -->
+
+
+
+</body>
 </html>
+
+
