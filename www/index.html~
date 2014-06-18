@@ -141,7 +141,7 @@ document.addEventListener('deviceready', function() {
     <div class="ui-block-b"><a href="#vk" data-transition="slide"><div class="ui-bar ui-bar-a" style="height:60px; text-align:center">
 		<ul class=custom-ul>
 		<li class=custom-li><img  src="icons/vk.png" style="width:25px; height:auto;"></li>
-		<li class=custom-li>Мы ВКонтакте</li>
+		<li class=custom-li>ВКонтакте</li>
 		</ul>
 </div></a></div>
 
