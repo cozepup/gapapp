@@ -13,11 +13,8 @@
 
  	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<link href="css/ratchet.css" rel="stylesheet">
 	<link href="css/ratchet.min.css" rel="stylesheet">
-	<link href="css/ratchet-theme-ios.css" rel="stylesheet">
 	<link href="css/ratchet-theme-ios.min.css" rel="stylesheet">
-        <script type="text/javascript" charset="utf-8" src="js/ratchet.js"></script>	
 	<script type="text/javascript" charset="utf-8" src="js/ratchet.min.js"></script> 
 
 	<link rel="stylesheet" href="css/dress.css" />	
@@ -45,34 +42,67 @@ document.addEventListener('deviceready', function() {
 
 </head>
 <body>
-
-
-
-	<div data-role="page" id="one" data-theme="a" data-position="fixed">
+	<div data-role="page" id="one" data-theme="a" data-position="fixed" style="background-color: #000000;">
 		<div data-role="header" data-position="fixed" data-fullscreen="true" style="font-size: 17px !important;">
 		<a href="#myPanel" class="ui-btn ui-btn-w ui-corner-all ui-icon-bullets ui-btn-icon-notext">Меню</a>
 			<h1>DressCode</h1>
 		</div>
-
-
-
-
 		
 <div class="slider" id="mySlider" style="position: fixed;">
   <div class="slide-group" style="-webkit-transition: 0ms; transition: 0ms;">
     <div class="slide">
-      <img src="themes/images/back.jpg" style="min-width: 100%; width: 100%;">
+      <img src="themes/images/pre.jpg" style="min-width: 100%; width: 100%;">
     </div>
     <div class="slide">
-      <img src="themes/images/back1.jpg" style="min-width: 100%; width: 100%;">
+      <img src="themes/images/pic1.jpg" style="min-width: 100%; width: 100%;">
     </div>
     <div class="slide">
-      <img src="themes/images/back2.jpg" style="min-width: 100%; width: 100%;">
+      <img src="themes/images/pic2.jpg" style="min-width: 100%; width: 100%;">
     </div>
-   </div>
+    <div class="slide">
+      <img src="themes/images/pic3.jpg" style="min-width: 100%; width: 100%;">
+    </div>
+    <div class="slide">
+      <img src="themes/images/pic4.jpg" style="min-width: 100%; width: 100%;">
+    </div>
+    <div class="slide">
+      <img src="themes/images/pic5.jpg" style="min-width: 100%; width: 100%;">
+    </div>
+    <div class="slide">
+      <img src="themes/images/pic6.jpg" style="min-width: 100%; width: 100%;">
+    </div>
+    <div class="slide">
+      <img src="themes/images/pic7.jpg" style="min-width: 100%; width: 100%;">
+    </div>
+    <div class="slide">
+      <img src="themes/images/pic8.jpg" style="min-width: 100%; width: 100%;">
+    </div>
+    <div class="slide">
+      <img src="themes/images/pic9.jpg" style="min-width: 100%; width: 100%;">
+    </div>
+    <div class="slide">
+      <img src="themes/images/pic10.jpg" style="min-width: 100%; width: 100%;">
+    </div>
+    <div class="slide">
+      <img src="themes/images/pic11.jpg" style="min-width: 100%; width: 100%;">
+    </div>
+    <div class="slide">
+      <img src="themes/images/pic12.jpg" style="min-width: 100%; width: 100%;">
+    </div>
+    <div class="slide">
+      <img src="themes/images/pic13.jpg" style="min-width: 100%; width: 100%;">
+    </div>
+    <div class="slide">
+      <img src="themes/images/pic14.jpg" style="min-width: 100%; width: 100%;">
+    </div>
+    <div class="slide">
+      <img src="themes/images/pic15.jpg" style="min-width: 100%; width: 100%;">
+    </div>
+    <div class="slide">
+      <img src="themes/images/pic16.jpg" style="min-width: 100%; width: 100%;">
+    </div>
+    </div>
 </div>
-
-
 
 <div data-role="footer" style="overflow:hidden;" data-position="fixed" data-fullscreen="true">
 	<div class="ui-grid-b">
@@ -104,7 +134,7 @@ document.addEventListener('deviceready', function() {
     <div class="ui-block-a"><a href="#shop" data-transition="slide"><div class="ui-bar ui-bar-a" style="height:60px;  text-align:center">
 		<ul class=custom-ul>
 		<li class=custom-li><img  src="icons/shop.png" style="width:25px; height:auto;"></li>
-		<li class=custom-li>О магазине</li>
+		<li class=custom-li>О нас</li>
 		</ul>
 </div></a></div>
 
@@ -143,8 +173,7 @@ document.addEventListener('deviceready', function() {
 		</ul>
 </div></a></div>
 </div>
-
-		</div>
+</div>
 <!-- panel -->
 <div data-role="panel" id="myPanel" data-swipe-close="false" data-theme="b" class="ui-panel ui-panel-position-left ui-panel-display-push ui-body-a ui-panel-animate ui-panel-closed"> 
 <div class="ui-panel-inner" style="">
@@ -195,13 +224,10 @@ document.addEventListener('deviceready', function() {
 </div>
   </div> 
 <!--end panel -->
-
 	</div>
 
 <!-- page popup -->
 <div data-role="dialog" id="popup" data-url="popup" tabindex="0" class="ui-page ui-page-theme-a ui-dialog" style="min-height: 939px;">
-
-
 
 	<div data-role="header" data-theme="a" role="banner" class="ui-header ui-bar-a" style="font-size: 17px !important;">
 		<h1 class="ui-title" role="heading" aria-level="1">Контакты</h1>
@@ -218,7 +244,6 @@ document.addEventListener('deviceready', function() {
 		<p>г. Харьков, ул. Пушкинская 43, ТЦ Сана</p>
 		<p><a href="#one" data-transition="slide" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Назад</a></p>
 	</div><!-- /content -->
-
 	
 </div>
 <!-- /page popup -->
@@ -295,7 +320,6 @@ document.addEventListener('deviceready', function() {
 </div>
 <!-- vk -->
 
-
 <!-- shop -->
 <div data-role="page" id="shop" data-theme="a" data-url="shop" tabindex="0" class="ui-page ui-page-theme-a" style="min-height: 733px;">
 
@@ -305,7 +329,6 @@ document.addEventListener('deviceready', function() {
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
-
   
 <h2>Добро пожаловать в наш магазин эксклюзивной одежды Dress Code!</h2>
 <div id="shopimage" style="min-width: 50%; position: relative; width:auto; height:auto; text-align:center">
@@ -336,13 +359,9 @@ document.addEventListener('deviceready', function() {
 <p>Тел: +380577518343, +380633966223</p>
 <p>Skype: elenapokalicina</p>
 <p>E-mail:&nbsp;elenapokalitsinadc@gmail.com</p>
-   
-      
-  	
-		
+  		
 		<p><a href="#one" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-back ui-btn-icon-left">Назад</a></p>
 	</div><!-- /content -->
-
 	
 </div>
 <!-- shop -->
@@ -368,11 +387,9 @@ document.addEventListener('deviceready', function() {
 <p>Тел: +380577518343, +380633966223</p>
 <p>Skype: elenapokalicina</p>
 <p>E-mail: elenapokalitsinadc@gmail.com</p>
-
 		
 		<p><a href="#one" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-back ui-btn-icon-left">Назад</a></p>
 	</div><!-- /content -->
-
 	
 </div>
 <!-- opt -->
@@ -402,7 +419,6 @@ document.addEventListener('deviceready', function() {
 
 		<p><a href="#one" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-back ui-btn-icon-left">Назад</a></p>
 	</div><!-- /content -->
-
 	
 </div>
 <!-- rozn -->
@@ -433,16 +449,12 @@ document.addEventListener('deviceready', function() {
 <p>Тел: +380577518343, +380633966223</p>
 <p>Skype: elenapokalicina</p>
 <p>E-mail: elenapokalitsinadc@gmail.com</p>
-
 		
 		<p><a href="#one" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-icon-back ui-btn-icon-left">Назад</a></p>
 	</div><!-- /content -->
-
 	
 </div>
 <!-- dost -->
-
-
 
 </body>
 </html>

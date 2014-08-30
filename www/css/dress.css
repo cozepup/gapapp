@@ -9,23 +9,22 @@
     bottom: 0px;  
     -webkit-overflow-scrolling: touch;
 }
-@media only screen and (max-width:479px){
-    body {
-     font-size: 14px !important; 
-      }
-	}
 @font-face {
     font-family: "Helvetica Neue"; 
-    src: url(HelveticaNeueCyr-Thin.otf); 
+    src: url(HelveticaNeueCyr-Thin.otf) format('otf'); 
    }
 @font-face {
     font-family: Helvetica; 
-    src: url(fonts/HelveticaNeueCyr-Light.otf); 
+    src: url(fonts/HelveticaNeueCyr-Light.otf) format('otf'); 
    }
 
 @font-face {
     font-family: sans-serif; 
-    src: url(fonts/HelveticaNeueCyr-Light.otf); 
+    src: url(fonts/HelveticaNeueCyr-Light.otf) format('otf'); 
    }
 
+@font-face {
+    font-family: sans-serif; 
+    src: url(fonts/helveticaneue.svg) format('svg'); 
+   }
 
