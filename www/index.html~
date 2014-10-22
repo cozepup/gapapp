@@ -116,7 +116,7 @@ document.addEventListener('deviceready', function() {
 		</ul>
 	</div></div>
 
-	<div class="ui-block-b" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=72', '_blank','location=no, closebuttoncaption=Вернуться');">
+	<div class="ui-block-b" onclick="var ref = window.open('http://elenapokalitsina.com.ua/mobile/index.php?route=product/category&path=72', '_blank','location=no, closebuttoncaption=Назад, toolbarposition=top');">
 	<div class="ui-bar ui-bar-a" style="height:60px; text-align:center">
 		<ul class=custom-ul>
 		<li class=custom-li><img  src="icons/sale.png" style="width:25px; height:auto;"></li>
