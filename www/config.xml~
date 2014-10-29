@@ -3,17 +3,17 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.dress"
+        id        = "com.phonegap.dresscode"
         version   = "1.0.0">
 
-    <name>Dress</name>
+    <name>DressCode</name>
 
     <description>
-        Beta App for DressCode
+        App for DressCode
     </description>
 
-    <author href="http://phonegap.com" email="support@phonegap.com">
-        PhoneGap Team
+    <author href="http://elenapokalitsina.com.ua" email="nikolaev1311@gmail.com">
+        Elena Pokalitsina / Nikolaev Artem
     </author>
 
     <!--
@@ -78,6 +78,8 @@
     <gap:splash src="res/screen/ios/screen-iphone-portrait-2x.png" gap:platform="ios"     width="640" height="960" />
     <gap:splash src="res/screen/ios/screen-ipad-portrait.png"      gap:platform="ios"     width="768" height="1024" />
     <gap:splash src="res/screen/ios/screen-ipad-landscape.png"     gap:platform="ios"     width="1024" height="768" />
+    <gap:splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png"     gap:platform="ios"     width="640" height="1136" />
+    <gap:splash src="res/screen/ios/screen-iphone-portrait-568h.png"     gap:platform="ios"     width="320" height="568" />
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone" />
 <gap:plugin name="org.apache.cordova.inappbrowser" />
 
